@@ -46,10 +46,15 @@ public int metodoMultiplica(int num1, int num2){
 
 
 El resultado de la suma es: <%= metodoSuma(7,5) %>
+
 <br>
+
 El resultado de la resta es: <%= metodoResta(7,5) %>
+
 <br>
+
 El resultado de la Multiplicaciones es: <%= metodoMultiplica(7,5) %>
+
 </body>
 
 
