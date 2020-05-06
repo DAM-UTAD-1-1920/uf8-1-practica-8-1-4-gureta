@@ -1,8 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.DriverManager"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,8 +29,11 @@ String pais=request.getParameter("pais");
 String tecno=request.getParameter("tecnologias");
 
 
+Class.forName("com.mysql.jbdc.Driver");
 
-Connection miConexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto_jsp", "root", "");
+try{
+
+java.sql.Connection miConexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto_jsp");
 
 java.sql.Statement miStatement= miConexion.createStatement();
 
@@ -37,6 +42,11 @@ String instruccionSql="INSERT INTO USUARIOS(Nombre, Apellidos, Usuarios, Contras
 miStatement.executeUpdate(instruccionSql);
 
 out.println("Registrado con exito");
+
+}catch (Exception e){
+	
+	out.println("ha habido un error");
+}
 
 
 
