@@ -9,10 +9,10 @@
 
 Selecciona tu ciudad de destino
 
-<select name="ciudad_favorita">
+<select name="agencia_viajes.jsp">
 
 	<option>Madrid</option>
-	<option>Par&iacute;s</option>	
+	<option>Paris</option>	
 	<option>Nueva_York</option>	
 	<option>Sidney</option>
 

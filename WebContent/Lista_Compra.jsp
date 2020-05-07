@@ -39,6 +39,7 @@
 <ul>
 
 <%
+
 List<String> ListaElementos=(List<String>)session.getAttribute("misElementos");
 
 if (ListaElementos==null){
