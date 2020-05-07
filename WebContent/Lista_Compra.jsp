@@ -38,13 +38,39 @@
 <h2>Carro de la compra</h2>
 <ul>
 
-<% String[] elementos = request.getParameterValues("articulos");
+<%
+List<String> ListaElementos=(List<String>)session.getAttribute("misElementos");
+
+if (ListaElementos==null){
+		
+		ListaElementos=new ArrayList<String>();
+		session.setAttribute("misElementos", ListaElementos);
+		
+}
+
+
+
+String[] elementos = request.getParameterValues("articulos");
 
 if(elementos !=null){
 	for(String elemTemp : elementos){
-		out.println("<li>" + elemTemp + "</li>");
+		
+		//out.println("<li>" + elemTemp + "</li>");
+		
+		ListaElementos.add(elemTemp);
+		
+		
+		
 	}
 }
+
+for (String elemTemp : ListaElementos){
+	
+	out.println("<li>" + elemTemp + "</li>");
+
+	
+}
+
 
 %>
 </ul>
