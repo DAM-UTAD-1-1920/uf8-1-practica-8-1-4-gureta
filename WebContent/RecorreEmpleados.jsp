@@ -75,13 +75,36 @@ font-weight:bold;
 
 
 </table>
+
 <c:forEach var="EmpTemp" items="${losEmpleados }">
 
-<tr class="cabezera">
+<tr>
 
-	<td>${EmpTemp.nombre }</td><td>${EmpTemp.apellido }</td><td> ${EmpTemp.puesto }</td><td> ${EmpTemp.salario }</td> </br>
+	<td >${EmpTemp.nombre }</td><td>${EmpTemp.apellido }</td><td> ${EmpTemp.puesto }</td><td>
+	
+	
+<c:if test="${ EmpTemp.salario<40000}">
+ 
+ 
+ 
+	
+	 ${EmpTemp.salario +5000 }</td> </br>
+	
+	</c:if>
+
+
+<c:if test="${ EmpTemp.salario>=40000}">
+ 
+ 
+ 
+	
+	 ${EmpTemp.salario }</td> </br>
+	
+	</c:if>
+
 
 </tr>
+
 
 </c:forEach>
 
