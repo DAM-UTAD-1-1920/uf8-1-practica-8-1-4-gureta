@@ -23,7 +23,7 @@
 
 <c:forEach var="teampAlumnos" items="${ losAlumnos}">
 
-${tempAlumnos } <br/>
+${tempAlumnos } <br/> 
 
 
 </c:forEach>
